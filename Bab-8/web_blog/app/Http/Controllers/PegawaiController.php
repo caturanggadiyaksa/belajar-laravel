@@ -23,6 +23,19 @@ class PegawaiController extends Controller
         return view('tambah');
     }
 
-    //alihkan redirect ke halaman pegawai
-    //return redirect('/pegawai');
+    //method untuk insert data ke table pegawai
+    public function store(Request $request)
+    {
+        //insert data ke table pegawai
+        DB::table('tablepegawai')->insert([
+            'nama' => $request->nama,
+            'jabatan' => $request->jabatan,
+            'umur' => $request->umur,
+            'alamat' => $request->alamat
+        ]);
+        //alihkan redirect ke halaman pegawai
+        return redirect('/pegawai');
+    }
+
+    
 }
