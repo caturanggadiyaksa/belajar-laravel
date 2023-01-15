@@ -2,3 +2,4 @@ BAB 7
 MENAMPILKAN DATA DARI TABEL MYSQL
 
 
+membuat db salaray
