@@ -14,7 +14,7 @@
 
     <br><br>
 
-    <form action="/pegawai/stroe" action="post">
+    <form action="/pegawai/store" action="POST">
         {{ csrf_field() }}
 
         nama <input type="text" name="nama">
