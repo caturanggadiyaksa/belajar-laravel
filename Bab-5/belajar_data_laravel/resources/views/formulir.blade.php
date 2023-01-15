@@ -8,8 +8,14 @@
 </head>
 <body>
     
-    <form action="">
-        
+    <form action="/formulir/proses" method="POST">
+        <input type="hidden" name="_token" value="<?php echo csrf_token() ?>">
+        <label for="nama">nama</label>
+        <input type="text" name="nama">
+        <br>
+        <label for="">Alamat</label>
+        <input type="text" name="alamat">
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
