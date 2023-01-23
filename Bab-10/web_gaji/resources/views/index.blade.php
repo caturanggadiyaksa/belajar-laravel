@@ -26,7 +26,7 @@
             <td>{{ $p->alamat }}</td>
             <td>
                 <a href="/pegawai/edit/{{ $p->id }}">Edit</a>
-                <a href="/pegawai/Hapus/{{ $p->id }}">Hapus</a>
+                <a href="/pegawai/hapus/{{ $p->id }}">Hapus</a>
             </td>
             
         </tr>
