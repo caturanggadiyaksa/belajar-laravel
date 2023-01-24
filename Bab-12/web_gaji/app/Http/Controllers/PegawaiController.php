@@ -9,7 +9,7 @@ class PegawaiController extends Controller
 {
     public function index() {
         //mengambil data dari table pegawai
-        $pegawai = DB::table('tablepegawai')->get();
+        $pegawai = DB::table('tablepegawai')->paginate(10);
 
         //mengirim data pegawai ke view index
         return view('index', ['pegawai' => $pegawai]);
