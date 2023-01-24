@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Menampilkan data dari database</title>
+
+    <style>
+        .pagination li{
+            float: left;
+            list-style-type: none;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <a href="/pegawai/tambah">+ Tambah Pegawai Baru</a>
     <br>
 
-    <table>
+    <table border="1">
         <tr>
             <th>Nama</th>
             <th>Jabatan</th>
@@ -32,5 +40,13 @@
         </tr>
         @endforeach
     </table>
+
+    <br>
+    Halaman : {{ $pegawai->currentPage() }} <br>
+    Jumlah Data : {{ $pegawai->total() }} <br>
+    Data per Halaman : {{ $pegawai->perPage() }} <br>
+
+
+    {{ $pegawai->links() }}
 </body>
 </html>
