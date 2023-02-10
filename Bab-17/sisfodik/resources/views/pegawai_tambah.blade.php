@@ -20,7 +20,8 @@
                 <br>
 
                 <form action="/pegawai/store" method="post">
-                    {{ csrf_field }}
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                     <div class="form-group">
                         <label for="">Nama</label>
                         <input type="text" name="nama" class="form-control" placeholder="nama pegawai">
