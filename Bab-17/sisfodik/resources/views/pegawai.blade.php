@@ -44,7 +44,7 @@
         </div>
     </div>
     
-    <h1>data pegawai</h1>
+    {{-- <h1>data pegawai</h1>
 
     <ul>
 
@@ -53,6 +53,6 @@
             {{ "Nama : ". $p->nama . ' | Alamat : ' . $p->alamat }}
         </li>
         @endforeach
-    </ul>
+    </ul> --}}
 </body>
 </html>
