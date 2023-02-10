@@ -14,4 +14,9 @@ class PegawaiController extends Controller
         //mengirim pegawai ke view pegawai
         return view('pegawai', ['pegawai' => $pegawai]);
     }
+
+
+    public function tambah() {
+        return view('pegawai_tambah');
+    }
 }
