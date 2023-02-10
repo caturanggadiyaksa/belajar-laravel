@@ -19,4 +19,19 @@ class PegawaiController extends Controller
     public function tambah() {
         return view('pegawai_tambah');
     }
+
+    public function store(Request $request) {
+
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        Pegawai::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect('/pegawai');
+    }
 }
