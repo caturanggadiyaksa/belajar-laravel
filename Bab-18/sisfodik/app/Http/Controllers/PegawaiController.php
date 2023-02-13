@@ -40,4 +40,18 @@ class PegawaiController extends Controller
         return view('pegawai_edit', ['pegawai' => $pegawai]);
     }
 
+    public function update($id, Request $request) {
+
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $pegawai = Pegawai::find($id);
+        $pegawai->nama = $request->nama;
+        $pegawai->alamat = $request->alamat;
+        $pegawai->save();
+        return redirect('/pegawai');
+    }
+
 }
