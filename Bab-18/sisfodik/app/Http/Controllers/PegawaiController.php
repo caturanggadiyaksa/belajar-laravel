@@ -34,4 +34,10 @@ class PegawaiController extends Controller
 
         return redirect('/pegawai');
     }
+
+    public function edit($id) {
+        $pegawai = Pegawai::find($id);
+        return view('pegawai_edit', ['pegawai' => $pegawai]);
+    }
+
 }
