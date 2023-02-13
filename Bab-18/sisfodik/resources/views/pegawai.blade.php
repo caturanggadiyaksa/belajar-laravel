@@ -33,8 +33,8 @@
                             <td>{{ $p->nama }}</td>
                             <td>{{ $p->alamat }}</td>
                             <td>
-                                <a href="/pegawai/edit" class="btn btn-warning">Edit</a>
-                                <a href="/pegawai/hapus" class="btn btn-danger">Hapus</a>
+                                <a href="/pegawai/edit/{{ $p->id }}" class="btn btn-warning">Edit</a>
+                                <a href="/pegawai/hapus/{{ $p->id }}" class="btn btn-danger">Hapus</a>
                             </td>
                          </tr>
                          @endforeach
