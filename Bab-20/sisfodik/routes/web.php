@@ -23,3 +23,7 @@ Route::get('/pegawai/tambah', 'PegawaiController@tambah');
 Route::get('/pegawai/edit/{id}', 'PegawaiController@edit');
 Route::put('/pegawai/update/{id}', 'PegawaiController@update');
 Route::get('pegawai/hapus/{id}', 'PegawaiController@delete');
+Route::get('/guru', 'GuruController@index');
+Route::get('/guru/hapus/{id}', 'GuruController@hapus');
+Route::get('/guru/trash', 'GuruController@trash');
+Route::get('/pengguna', 'PenggunaController@index');
