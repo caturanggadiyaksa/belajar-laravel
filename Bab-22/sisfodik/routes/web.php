@@ -28,3 +28,4 @@ Route::get('/guru/hapus/{id}', 'GuruController@hapus');
 Route::get('/guru/trash', 'GuruController@trash');
 Route::get('/pengguna', 'PenggunaController@index');
 Route::get('/article', 'WebController@index');
+Route::get('/anggota', 'AnggotaController@index');
